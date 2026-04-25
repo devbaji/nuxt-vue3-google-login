@@ -1,0 +1,81 @@
+{
+  "name": "nuxt-vue3-google-login",
+  "version": "1.0.0",
+  "description": "Nuxt 3 module for vue3-google-login — zero-config Google OAuth integration with auto-imported components and utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devbaji/nuxt-vue3-google-login"
+  },
+  "homepage": "https://github.com/devbaji/nuxt-vue3-google-login#readme",
+  "bugs": {
+    "url": "https://github.com/devbaji/nuxt-vue3-google-login/issues"
+  },
+  "license": "MIT",
+  "author": "Baji",
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "nuxt3",
+    "google",
+    "google-login",
+    "google-oauth",
+    "vue3-google-login",
+    "gsi",
+    "one-tap",
+    "oauth2"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "workspaces": [
+    "playground"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "npm run dev:prepare && nuxt dev playground",
+    "dev:build": "nuxt build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.4.2",
+    "defu": "^6.1.4",
+    "vue3-google-login": "^2.0.37"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^3.2.4",
+    "@nuxt/eslint-config": "^1.15.2",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.4.2",
+    "@nuxt/test-utils": "^4.0.2",
+    "@types/node": "latest",
+    "changelogen": "^0.6.2",
+    "eslint": "^10.2.1",
+    "nuxt": "^4.4.2",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.4",
+    "vue-tsc": "^3.2.7"
+  },
+  "peerDependencies": {
+    "nuxt": ">=3.0.0"
+  }
+}
