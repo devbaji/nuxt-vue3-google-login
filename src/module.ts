@@ -119,6 +119,12 @@ export default defineNuxtModule<ModuleOptions>({
       mode: 'client',
     })
 
+    // Pre-bundle vue3-google-login so Vite doesn't discover it late at runtime,
+    // which would cause an unnecessary page reload in development.
+    nuxt.options.vite.optimizeDeps ||= {}
+    nuxt.options.vite.optimizeDeps.include ||= []
+    nuxt.options.vite.optimizeDeps.include.push('vue3-google-login')
+
     // Auto-import all utility functions from vue3-google-login.
     addImports([
       { name: 'decodeCredential', from: 'vue3-google-login' },
