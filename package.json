@@ -1,6 +1,6 @@
 {
   "name": "nuxt-vue3-google-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nuxt 3 module for vue3-google-login — zero-config Google OAuth integration with auto-imported components and utilities",
   "repository": {
     "type": "git",
