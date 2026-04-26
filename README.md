@@ -136,18 +136,40 @@ googleSdkLoaded((google) => {
 </script>
 ```
 
-## Auto-imported Utilities
+## Auto-imported Utilities & Composables
 
-All functions from `vue3-google-login` are available without any import statement:
+All functions and composables from `vue3-google-login` are available without any import statement:
 
-| Function | Description |
-|---|---|
-| `decodeCredential(token)` | Decode a Google JWT credential into a user object |
-| `googleOneTap(options?)` | Show the One Tap prompt |
-| `googleLogout()` | Disable auto-select / sign out |
-| `googleTokenLogin(options?)` | Trigger OAuth popup returning an access token |
-| `googleAuthCodeLogin(options?)` | Trigger OAuth popup returning an auth code |
-| `googleSdkLoaded(callback)` | Run code once the Google GSI SDK is ready |
+| Name | Type | Description |
+|---|---|---|
+| `useGoogleSdk()` | Composable | Returns `{ isLoaded }` — reactive boolean, `true` once the GSI SDK is ready |
+| `decodeCredential(token)` | Function | Decode a Google JWT credential into a user object |
+| `googleOneTap(options?)` | Function | Show the One Tap prompt |
+| `googleLogout()` | Function | Disable auto-select / sign out |
+| `googleTokenLogin(options?)` | Function | Trigger OAuth popup returning an access token |
+| `googleAuthCodeLogin(options?)` | Function | Trigger OAuth popup returning an auth code |
+| `googleSdkLoaded(callback)` | Function | Run code once the Google GSI SDK is ready |
+
+### `useGoogleSdk` example
+
+Useful when building a custom button — keeps it disabled until the SDK is ready:
+
+```vue
+<template>
+  <button :disabled="!isLoaded" @click="login">
+    Sign in with Google
+  </button>
+</template>
+
+<script setup lang="ts">
+const { isLoaded } = useGoogleSdk()
+
+async function login() {
+  const { code } = await googleAuthCodeLogin()
+  // exchange code on your server
+}
+</script>
+```
 
 ## Full Documentation
 
