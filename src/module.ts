@@ -125,8 +125,9 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.vite.optimizeDeps.include ||= []
     nuxt.options.vite.optimizeDeps.include.push('vue3-google-login')
 
-    // Auto-import all utility functions from vue3-google-login.
+    // Auto-import all utility functions and composables from vue3-google-login.
     addImports([
+      { name: 'useGoogleSdk', from: 'vue3-google-login' },
       { name: 'decodeCredential', from: 'vue3-google-login' },
       { name: 'googleOneTap', from: 'vue3-google-login' },
       { name: 'googleLogout', from: 'vue3-google-login' },
