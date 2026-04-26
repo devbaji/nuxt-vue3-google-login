@@ -1,6 +1,6 @@
 {
   "name": "nuxt-vue3-google-login",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Nuxt 3 module for vue3-google-login — Add a Login with Google feature to your Nuxt 3 application using Google Identity Services",
   "repository": {
     "type": "git",

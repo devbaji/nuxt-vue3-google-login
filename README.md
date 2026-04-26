@@ -149,6 +149,12 @@ All functions from `vue3-google-login` are available without any import statemen
 | `googleAuthCodeLogin(options?)` | Trigger OAuth popup returning an auth code |
 | `googleSdkLoaded(callback)` | Run code once the Google GSI SDK is ready |
 
+## Full Documentation
+
+This module is a Nuxt wrapper for **vue3-google-login**. For the complete API reference — including all component props, callback types, GSI configuration options, and advanced usage — see the full documentation:
+
+**[devbaji.github.io/vue3-google-login](https://devbaji.github.io/vue3-google-login/)**
+
 ## Notes
 
 - **`callback` and `error` in module options** — these are function types that cannot be serialized into `runtimeConfig`. Pass `callback` as a prop on `<GoogleLogin :callback="...">`, or use `googleOneTap({ callback: ... })` for One Tap.
