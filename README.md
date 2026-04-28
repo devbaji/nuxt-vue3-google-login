@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Nuxt](https://img.shields.io/badge/Nuxt-3%2B-00DC82.svg)](https://nuxt.com)
 
-Nuxt 3 module for [vue3-google-login](https://github.com/devbaji/vue3-google-login) — zero-config Google OAuth integration with auto-imported components and utility functions.
+Nuxt 3 module for [vue3-google-login](https://www.npmjs.com/package/vue3-google-login) — zero-config Google OAuth integration with auto-imported components and utility functions.
 
 ## Features
 
