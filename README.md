@@ -1,8 +1,24 @@
-# nuxt-vue3-google-login
+# Nuxt module for Vue 3 Google Login
 
-[![npm version](https://img.shields.io/npm/v/nuxt-vue3-google-login.svg)](https://www.npmjs.com/package/nuxt-vue3-google-login)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Nuxt](https://img.shields.io/badge/Nuxt-3%2B-00DC82.svg)](https://nuxt.com)
+<p align="center">
+  <img
+    src="https://devbaji.github.io/vue3-google-login/images/vue-google-login.gif"
+    width="150"
+    alt="Vue 3 Google Login - Automatic Google Sign In Demo"
+  >
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/nuxt-vue3-google-login" target="_blank">
+    <img src="https://img.shields.io/npm/v/nuxt-vue3-google-login.svg" alt="npm version"/>
+  </a>&nbsp;
+  <a href="https://opensource.org/licenses/MIT" target="_blank">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+  </a>&nbsp;
+  <a href="https://nuxt.com" target="_blank">
+    <img src="https://img.shields.io/badge/Nuxt-3%2B-00DC82.svg" alt="Nuxt"/>
+  </a>
+</p>
 
 Nuxt 3 module for [vue3-google-login](https://www.npmjs.com/package/vue3-google-login) — zero-config Google OAuth integration with auto-imported components and utility functions.
 
