@@ -2,7 +2,7 @@
 
 <p align="center">
   <img
-    src="https://devbaji.github.io/vue3-google-login/images/vue-google-login.gif"
+    src="https://vue3-google-login.pages.dev/images/vue-google-login.gif"
     width="150"
     alt="Vue 3 Google Login - Automatic Google Sign In Demo"
   >
@@ -191,7 +191,7 @@ async function login() {
 
 This module is a Nuxt wrapper for **vue3-google-login**. For the complete API reference — including all component props, callback types, GSI configuration options, and advanced usage — see the full documentation:
 
-**[devbaji.github.io/vue3-google-login](https://devbaji.github.io/vue3-google-login/)**
+**[https://vue3-google-login.pages.dev/](https://vue3-google-login.pages.dev/)**
 
 ## Notes
 
